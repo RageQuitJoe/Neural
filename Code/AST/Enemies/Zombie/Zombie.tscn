@@ -1,0 +1,312 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://AST/Enemies/Zombie/Zombie-Sheet.png" type="Texture" id=1]
+[ext_resource path="res://AST/Enemies/Zombie/Scripts/Zombie.gd" type="Script" id=2]
+[ext_resource path="res://AST/Enemies/Zombie/Scripts/Follow.gd" type="Script" id=3]
+[ext_resource path="res://AST/Enemies/Zombie/Scripts/Detect.gd" type="Script" id=4]
+[ext_resource path="res://AST/Enemies/Zombie/Scripts/HitBox.gd" type="Script" id=5]
+[ext_resource path="res://font.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://AST/Enemies/Zombie/Scripts/Drain.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.0516, 10.2973 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 11.0079, 15.9723 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 256, 256 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 11.9266, 16.9043 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 256, 256 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 1220, 1220 )
+
+[sub_resource type="Animation" id=8]
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 21 ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 21, 22, 23, 24, 25, 26, 27 ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 14, 15, 16, 17, 18, 19, 20 ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 7, 8, 9, 10, 11, 12, 13 ]
+}
+
+[sub_resource type="DynamicFont" id=16]
+outline_color = Color( 0.14902, 0.14902, 0.14902, 1 )
+font_data = ExtResource( 6 )
+
+[node name="Zombie" type="KinematicBody2D" groups=[
+"SaveFree",
+]]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 4
+hframes = 7
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 5.88432 )
+shape = SubResource( 1 )
+
+[node name="HitBox" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 32
+script = ExtResource( 5 )
+
+[node name="HitBox" type="CollisionShape2D" parent="HitBox"]
+shape = SubResource( 2 )
+
+[node name="HitBoxTimer" type="Timer" parent="HitBox"]
+
+[node name="Drain" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 7 )
+
+[node name="DrainNear" type="Area2D" parent="Drain"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="Drain" type="CollisionShape2D" parent="Drain/DrainNear"]
+shape = SubResource( 3 )
+
+[node name="DrainFar" type="Area2D" parent="Drain"]
+collision_layer = 0
+collision_mask = 16
+
+[node name="Drain" type="CollisionShape2D" parent="Drain/DrainFar"]
+shape = SubResource( 4 )
+
+[node name="DrainTimer" type="Timer" parent="Drain"]
+
+[node name="Detect" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Collision" type="Area2D" parent="Detect"]
+visible = false
+collision_layer = 0
+collision_mask = 81
+
+[node name="Collision" type="CollisionShape2D" parent="Detect/Collision"]
+shape = SubResource( 5 )
+
+[node name="Sight" type="Area2D" parent="Detect"]
+collision_layer = 0
+collision_mask = 16
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="UP" type="CollisionPolygon2D" parent="Detect/Sight"]
+polygon = PoolVector2Array( 512, -512, 0, 0, -512, -512 )
+disabled = true
+
+[node name="DW" type="CollisionPolygon2D" parent="Detect/Sight"]
+polygon = PoolVector2Array( -512, 512, 0, 0, 512, 512, -512, 512 )
+
+[node name="LT" type="CollisionPolygon2D" parent="Detect/Sight"]
+position = Vector2( 0, 5.88432 )
+rotation = -1.5708
+polygon = PoolVector2Array( 517.886, -511.998, 5.88432, 2.13012e-05, -506.114, -512.002 )
+disabled = true
+
+[node name="RT" type="CollisionPolygon2D" parent="Detect/Sight"]
+rotation = 1.5708
+polygon = PoolVector2Array( -512.002, -511.998, 511.998, -512.002, 0, 0 )
+disabled = true
+
+[node name="HearWalk" type="Area2D" parent="Detect"]
+visible = false
+collision_layer = 0
+collision_mask = 16
+
+[node name="Sneak" type="CollisionShape2D" parent="Detect/HearWalk"]
+shape = SubResource( 6 )
+
+[node name="HearRun" type="Area2D" parent="Detect"]
+visible = false
+collision_layer = 0
+collision_mask = 16
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Run" type="CollisionShape2D" parent="Detect/HearRun"]
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Timer" type="Timer" parent="Detect"]
+
+[node name="Follow" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 3 )
+
+[node name="Anm" type="AnimationPlayer" parent="."]
+anims/ID_DW = SubResource( 8 )
+anims/ID_LT = SubResource( 9 )
+anims/ID_RT = SubResource( 10 )
+anims/ID_UP = SubResource( 11 )
+anims/MV_DW = SubResource( 12 )
+anims/MV_LT = SubResource( 13 )
+anims/MV_RT = SubResource( 14 )
+anims/MV_UP = SubResource( 15 )
+
+[node name="Battery" type="Label" parent="."]
+margin_top = -64.0
+margin_right = 40.0
+margin_bottom = -48.0
+custom_fonts/font = SubResource( 16 )
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="area_entered" from="HitBox" to="HitBox" method="_on_HitBox_area_entered"]
+[connection signal="area_exited" from="HitBox" to="HitBox" method="_on_HitBox_area_exited"]
+[connection signal="timeout" from="HitBox/HitBoxTimer" to="HitBox" method="_on_HitBoxTimer_timeout"]
+[connection signal="area_entered" from="Drain/DrainNear" to="Drain" method="_on_DrainNear_area_entered"]
+[connection signal="area_exited" from="Drain/DrainNear" to="Drain" method="_on_DrainNear_area_exited"]
+[connection signal="area_entered" from="Drain/DrainFar" to="Drain" method="_on_DrainFar_area_entered"]
+[connection signal="area_exited" from="Drain/DrainFar" to="Drain" method="_on_DrainFar_area_exited"]
+[connection signal="timeout" from="Drain/DrainTimer" to="Drain" method="_on_DrainTimer_timeout"]
+[connection signal="area_entered" from="Detect/Collision" to="Detect" method="_on_Collision_area_entered"]
+[connection signal="area_exited" from="Detect/Collision" to="Detect" method="_on_Collision_area_exited"]
+[connection signal="area_entered" from="Detect/Sight" to="Detect" method="_on_Sight_area_entered"]
+[connection signal="area_entered" from="Detect/HearWalk" to="Detect" method="_on_HearWalk_area_entered"]
+[connection signal="area_entered" from="Detect/HearRun" to="Detect" method="_on_HearRun_area_entered"]
+[connection signal="area_exited" from="Detect/HearRun" to="Detect" method="_on_HearRun_area_exited"]
+[connection signal="timeout" from="Detect/Timer" to="Detect" method="_on_Timer_timeout"]

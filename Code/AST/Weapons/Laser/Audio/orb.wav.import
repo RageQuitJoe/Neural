@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/orb.wav-4082e6b04d47d7c314ccbb1084f600b8.sample"
+
+[deps]
+
+source_file="res://AST/Weapons/Laser/Audio/orb.wav"
+dest_files=[ "res://.import/orb.wav-4082e6b04d47d7c314ccbb1084f600b8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

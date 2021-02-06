@@ -1,0 +1,420 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://MNU/Selector.png" type="Texture" id=1]
+[ext_resource path="res://MNU/Empty.png" type="Texture" id=2]
+[ext_resource path="res://MNU/Inventory.gd" type="Script" id=3]
+[ext_resource path="res://font.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="StreamTexture" id=2]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="StreamTexture" id=3]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="StreamTexture" id=4]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="StreamTexture" id=5]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="StreamTexture" id=6]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="StreamTexture" id=7]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="DynamicFont" id=8]
+size = 8
+font_data = ExtResource( 4 )
+
+[sub_resource type="StreamTexture" id=9]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="StreamTexture" id=10]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="StreamTexture" id=11]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="StreamTexture" id=12]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[sub_resource type="StreamTexture" id=13]
+load_path = "res://.import/Empty.png-47b5532b2cdf23fa2ed9a1281c5ec6e3.stex"
+
+[node name="Inventory" type="Node2D"]
+position = Vector2( 960, 544 )
+script = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Modulate" type="Node2D" parent="."]
+
+[node name="A" type="Sprite" parent="Modulate"]
+position = Vector2( -704, -224 )
+scale = Vector2( 2.375, 2.375 )
+texture = ExtResource( 2 )
+
+[node name="Display" type="Sprite" parent="Modulate"]
+position = Vector2( -352, -224 )
+scale = Vector2( 2.375, 2.375 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Carousel" type="Node2D" parent="Modulate"]
+position = Vector2( 0, -224 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Selector" type="Sprite" parent="Modulate/Carousel"]
+scale = Vector2( 0.1875, 0.1875 )
+z_index = 1
+texture = ExtResource( 1 )
+
+[node name="A" type="Node2D" parent="Modulate/Carousel"]
+position = Vector2( 0, -64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="A1A" type="Sprite" parent="Modulate/Carousel/A"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 1 )
+
+[node name="A2A" type="Sprite" parent="Modulate/Carousel/A"]
+position = Vector2( -32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 2 )
+
+[node name="A3A" type="Sprite" parent="Modulate/Carousel/A"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 3 )
+
+[node name="A4A" type="Sprite" parent="Modulate/Carousel/A"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 3 )
+
+[node name="A5A" type="Sprite" parent="Modulate/Carousel/A"]
+position = Vector2( 64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 3 )
+
+[node name="B" type="Node2D" parent="Modulate/Carousel"]
+position = Vector2( 0, -32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="B1A" type="Sprite" parent="Modulate/Carousel/B"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 4 )
+
+[node name="B2A" type="Sprite" parent="Modulate/Carousel/B"]
+position = Vector2( -32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 4 )
+
+[node name="B3A" type="Sprite" parent="Modulate/Carousel/B"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 4 )
+
+[node name="B4A" type="Sprite" parent="Modulate/Carousel/B"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 4 )
+
+[node name="B5A" type="Sprite" parent="Modulate/Carousel/B"]
+position = Vector2( 64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 4 )
+
+[node name="C" type="Node2D" parent="Modulate/Carousel"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="C1A" type="Sprite" parent="Modulate/Carousel/C"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 5 )
+
+[node name="C2A" type="Sprite" parent="Modulate/Carousel/C"]
+position = Vector2( -32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 5 )
+
+[node name="C3A" type="Sprite" parent="Modulate/Carousel/C"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 5 )
+
+[node name="C4A" type="Sprite" parent="Modulate/Carousel/C"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 5 )
+
+[node name="C5A" type="Sprite" parent="Modulate/Carousel/C"]
+position = Vector2( 64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 5 )
+
+[node name="D" type="Node2D" parent="Modulate/Carousel"]
+position = Vector2( 0, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="D1A" type="Sprite" parent="Modulate/Carousel/D"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 6 )
+
+[node name="D2A" type="Sprite" parent="Modulate/Carousel/D"]
+position = Vector2( -32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 6 )
+
+[node name="D3A" type="Sprite" parent="Modulate/Carousel/D"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 6 )
+
+[node name="D4A" type="Sprite" parent="Modulate/Carousel/D"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 6 )
+
+[node name="D5A" type="Sprite" parent="Modulate/Carousel/D"]
+position = Vector2( 64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 6 )
+
+[node name="E" type="Node2D" parent="Modulate/Carousel"]
+position = Vector2( 0, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="E1A" type="Sprite" parent="Modulate/Carousel/E"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 7 )
+
+[node name="E2A" type="Sprite" parent="Modulate/Carousel/E"]
+position = Vector2( -32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 7 )
+
+[node name="E3A" type="Sprite" parent="Modulate/Carousel/E"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 7 )
+
+[node name="E4A" type="Sprite" parent="Modulate/Carousel/E"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 7 )
+
+[node name="E5A" type="Sprite" parent="Modulate/Carousel/E"]
+position = Vector2( 64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 7 )
+
+[node name="Description" type="Sprite" parent="Modulate"]
+position = Vector2( 352.344, -224 )
+scale = Vector2( 2.38037, 2.375 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Info" type="Label" parent="Modulate/Description"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -125.0
+margin_top = -125.0
+margin_right = -4.0
+margin_bottom = -3.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.14902, 0.14902, 0.14902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="D" type="Sprite" parent="Modulate"]
+position = Vector2( 704, -224 )
+scale = Vector2( 2.375, 2.375 )
+texture = ExtResource( 2 )
+
+[node name="NoModulate" type="Node2D" parent="."]
+
+[node name="Carousel" type="Node2D" parent="NoModulate"]
+position = Vector2( 0, -224 )
+scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="A" type="Node2D" parent="NoModulate/Carousel"]
+position = Vector2( 0, -64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="A1B" type="Sprite" parent="NoModulate/Carousel/A"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 9 )
+
+[node name="A2B" type="Sprite" parent="NoModulate/Carousel/A"]
+position = Vector2( -32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 9 )
+
+[node name="A3B" type="Sprite" parent="NoModulate/Carousel/A"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 9 )
+
+[node name="A4B" type="Sprite" parent="NoModulate/Carousel/A"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 9 )
+
+[node name="A5B" type="Sprite" parent="NoModulate/Carousel/A"]
+position = Vector2( 64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 9 )
+
+[node name="B" type="Node2D" parent="NoModulate/Carousel"]
+position = Vector2( 0, -32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="B1B" type="Sprite" parent="NoModulate/Carousel/B"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 10 )
+
+[node name="B2B" type="Sprite" parent="NoModulate/Carousel/B"]
+position = Vector2( -32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 10 )
+
+[node name="B3B" type="Sprite" parent="NoModulate/Carousel/B"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 10 )
+
+[node name="B4B" type="Sprite" parent="NoModulate/Carousel/B"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 10 )
+
+[node name="B5B" type="Sprite" parent="NoModulate/Carousel/B"]
+position = Vector2( 64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 10 )
+
+[node name="C" type="Node2D" parent="NoModulate/Carousel"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="C1B" type="Sprite" parent="NoModulate/Carousel/C"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 11 )
+
+[node name="C2B" type="Sprite" parent="NoModulate/Carousel/C"]
+position = Vector2( -32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 11 )
+
+[node name="C3B" type="Sprite" parent="NoModulate/Carousel/C"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 11 )
+
+[node name="C4B" type="Sprite" parent="NoModulate/Carousel/C"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 11 )
+
+[node name="C5B" type="Sprite" parent="NoModulate/Carousel/C"]
+position = Vector2( 64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 11 )
+
+[node name="D" type="Node2D" parent="NoModulate/Carousel"]
+position = Vector2( 0, 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="D1B" type="Sprite" parent="NoModulate/Carousel/D"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 12 )
+
+[node name="D2B" type="Sprite" parent="NoModulate/Carousel/D"]
+position = Vector2( -32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 12 )
+
+[node name="D3B" type="Sprite" parent="NoModulate/Carousel/D"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 12 )
+
+[node name="D4B" type="Sprite" parent="NoModulate/Carousel/D"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 12 )
+
+[node name="D5B" type="Sprite" parent="NoModulate/Carousel/D"]
+position = Vector2( 64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 12 )
+
+[node name="E" type="Node2D" parent="NoModulate/Carousel"]
+position = Vector2( 0, 64 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="E1B" type="Sprite" parent="NoModulate/Carousel/E"]
+position = Vector2( -64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 13 )
+
+[node name="E2B" type="Sprite" parent="NoModulate/Carousel/E"]
+position = Vector2( -32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 13 )
+
+[node name="E3B" type="Sprite" parent="NoModulate/Carousel/E"]
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 13 )
+
+[node name="E4B" type="Sprite" parent="NoModulate/Carousel/E"]
+position = Vector2( 32, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 13 )
+
+[node name="E5B" type="Sprite" parent="NoModulate/Carousel/E"]
+position = Vector2( 64, 0 )
+scale = Vector2( 0.1875, 0.1875 )
+texture = SubResource( 13 )
+
+[node name="Selected" type="Sprite" parent="NoModulate"]
+position = Vector2( -352, -224 )
+scale = Vector2( 2.375, 2.375 )
+texture = ExtResource( 2 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

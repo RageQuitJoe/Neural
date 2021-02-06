@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://AST/Buildings/Basic/Rooms/BR4.gd" type="Script" id=1]
+[ext_resource path="res://AST/Buildings/Basic/Rooms/RoomBasic.tres" type="TileSet" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64, 64 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 76, 76 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 76, 76 )
+
+[node name="BR4" type="Node2D" groups=[
+"SaveFree",
+]]
+z_index = 1
+z_as_relative = false
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 33
+collision_mask = 33
+format = 1
+tile_data = PoolIntArray( -262149, 1610612739, 0, -262147, -1073741822, 0, -262146, 1610612740, 0, -327680, 1610612740, 0, -327678, -1610612734, 0, -327677, -1073741821, 0, -196612, 0, 0, -196610, 0, 0, -262144, 0, 0, -262142, 0, 0, -131077, 2, 0, -196604, 2, 0, -65541, -1610612732, 0, -65540, 0, 0, -65538, 0, 0, -131072, 0, 0, -131070, 0, 0, -131068, -1073741820, 0, 65531, -1610612732, 0, 65532, 0, 0, 65534, 0, 0, 0, 0, 0, 2, 0, 0, 4, -1073741820, 0, 196603, 1610612738, 0, 196604, 0, 0, 196606, 0, 0, 131072, 0, 0, 131074, 0, 0, 131076, 1610612738, 0, 262139, -1610612733, 0, 196611, 3, 0, 327677, -1073741822, 0, 327678, 4, 0, 262144, 4, 0, 262146, -1610612734, 0 )
+
+[node name="PlayerOn" type="Area2D" parent="."]
+visible = false
+collision_layer = 2
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape" type="CollisionShape2D" parent="PlayerOn"]
+shape = SubResource( 1 )
+
+[node name="DoublePlace" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoublePlace"]
+shape = SubResource( 2 )
+
+[node name="DoubleFree" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoubleFree"]
+visible = false
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="area_entered" from="PlayerOn" to="." method="_on_PlayerOn_area_entered"]
+[connection signal="area_exited" from="PlayerOn" to="." method="_on_PlayerOn_area_exited"]
+[connection signal="area_entered" from="DoublePlace" to="." method="_on_DoublePlace_area_entered"]
+[connection signal="area_exited" from="DoublePlace" to="." method="_on_DoublePlace_area_exited"]
+[connection signal="area_entered" from="DoubleFree" to="." method="_on_DoubleFree_area_entered"]
